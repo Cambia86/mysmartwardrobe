@@ -8,6 +8,8 @@ var mongodb = require("mongodb");
 var cors = require('cors')
 // var CONTACTS_COLLECTION = "standings";
 
+const category = require('./routes/category')
+
 function main() {
   var app = express();
   // let handlers = new HandlerGenerator();
@@ -58,7 +60,7 @@ function main() {
 
   // // app.use('/api/transaction', middleware.checkToken, standing_v2)
   // app.use('/api/transaction', transaction)
-  // app.use('/api/category', category)
+  app.use('/api/category', category)
   // app.use('/api/account', account)
 
   var server = app.listen(process.env.PORT || 8084, function () {

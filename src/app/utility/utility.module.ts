@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { UtilityRoutingModule } from './utility-routing.module';
 import { CategoryComponent } from './category/category.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,9 @@ import { CategoryComponent } from './category/category.component';
   ],
   imports: [
     CommonModule,
-    UtilityRoutingModule
+    UtilityRoutingModule,
+    ReactiveFormsModule,
+    NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' })
   ]
 })
 export class UtilityModule { }
